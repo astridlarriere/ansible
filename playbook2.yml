@@ -1,4 +1,5 @@
 - hosts: localhost
+  become: True
   vars_prompt:
     - name: package
       prompt: "Quel paquet voulez-vous installer ?"
