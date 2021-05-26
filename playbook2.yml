@@ -1,5 +1,5 @@
 - hosts: localhost
-  become: yes
+  become: yes --ask-become-pass, -K
   vars_prompt:
     - name: package
       prompt: "Quel paquet voulez-vous installer ?"
