@@ -1,5 +1,6 @@
 - hosts: localhost
   become: yes
+  become_user: root
   vars_prompt:
     - name: package
       prompt: "Quel paquet voulez-vous installer ?"
