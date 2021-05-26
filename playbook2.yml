@@ -1,4 +1,4 @@
-- hosts: localhost
+- hosts: remote
   become: yes
   become_user: root
   vars_prompt:
