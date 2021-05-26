@@ -1,15 +1,16 @@
 - hosts: localhost
   vars_prompt:
-    - name : package
+    - name: package
       prompt: "Quel paquet voulez-vous installer ?"
       private: no
 
-    - name : version
+    - name: version
       prompt: "Quelle version du paquet ?"
+      default: latest
       private: no
 
   tasks:
   - name: install chosen package 
     apt:
       package: "{{ package }}"
-      version: "{{ version }}"
+      state: "{{ version }}"
